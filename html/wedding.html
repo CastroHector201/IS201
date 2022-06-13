@@ -1,0 +1,49 @@
+<!--Hector Castro 06/11/2022-->
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pictures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link href="../styles/mystyle.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class = content>
+        <div class="center">  
+            <h2 class="center">Groom and Bride</h2>
+        </div>  
+        <div style="max-width:500px" class="center">
+            <img class="img" src="../images/4.jpeg" alt="Wedding picture with brother in law" >
+            <img class="img" src="../images/5.jpeg" alt="Wedding picture with sister">
+            <img class="img" src="../images/6.jpeg" alt="Wedding picture with brother in law">  
+        </div>
+        <div>
+            <form class="center">
+                <input class= "center" type="button" value="Go back!" onclick="history.back()">
+            </form>
+        </div>
+    </div> 
+
+        <footer id="footer">Copyright &copy; My Website 2022</footer>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("img");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
